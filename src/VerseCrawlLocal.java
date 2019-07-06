@@ -357,7 +357,8 @@ public class VerseCrawlLocal extends JFrame {
 			 		if(c.contains("十")) {
 			 			if     (c.length()==1)                 {c=c.replaceAll("十", "10");}
 			 			else if(c.indexOf("十")==c.length()-1)  {c=c.replaceAll("十", "0");}
-			 			else if(c.indexOf("十")< c.length()-1)  {c=c.replaceAll("十", "1");}
+			 			else if(c.length()!=1&& c.indexOf("十")==0)  {c=c.replaceAll("十", "1");}
+			 			else {c=c.replaceAll("十","");}
 			 		}
 			 		
 			 		System.out.println(c);
