@@ -54,13 +54,13 @@ public class VerseCrawlLocal extends JFrame {
     private JLabel lb1,lb2,lb3,lb4;
     private JComboBox Box,Box1,Box2,Box3;
     JTextArea textArea,txa2,txa3;
-    String bookk[]= {"³Ğ","¥X","§Q","¥Á","¥Ó","®Ñ","¤h","±o","¼»¤W","¼»¤U","¤ı¤W","¤ı¤U","¥N¤W","¥N¤U","©Ô","¥§","´µ","§B","¸Ö","½e","¶Ç","ºq","ÁÉ","­C","«s","µ²","¦ı","¦ó","Ò­","¼¯","«X","®³","À±","ÂE","«¢","µf","¸Ó","¨È","º¿","¤Ó","¥i","¸ô","¬ù","®{","Ã¹","ªL«e","ªL«á","¥[","¥±","µÌ","¦è","©««e","©««á","´£«e","´£«á","¦h","ªù","¨Ó","¶®","©¼«e","©¼«á","¬ù³ü","¬ù¶L","¬ù°Ñ","µS","±Ò"} ;
+    String bookk[]= {"å‰µ","å‡º","åˆ©","æ°‘","ç”³","æ›¸","å£«","å¾—","æ’’ä¸Š","æ’’ä¸‹","ç‹ä¸Š","ç‹ä¸‹","ä»£ä¸Š","ä»£ä¸‹","æ‹‰","å°¼","æ–¯","ä¼¯","è©©","ç®´","å‚³","æ­Œ","è³½","è€¶","å“€","çµ","ä½†","ä½•","ç¥","æ‘©","ä¿„","æ‹¿","å½Œ","é´»","å“ˆ","ç•ª","è©²","äº","ç‘ª","å¤ª","å¯","è·¯","ç´„","å¾’","ç¾…","æ—å‰","æ—å¾Œ","åŠ ","å¼—","è…“","è¥¿","å¸–å‰","å¸–å¾Œ","æå‰","æå¾Œ","å¤š","é–€","ä¾†","é›…","å½¼å‰","å½¼å¾Œ","ç´„å£¹","ç´„è²³","ç´„åƒ","çŒ¶","å•Ÿ"} ;
     String bookEng[]= {"Genesis","Exodus","Leviticus","Numbers","Deuteronomy","Joshua","Judges","Ruth","1 Samuel","2 Samuel","1Kings","2Kings","1 Chronicles","2 Chronicles","Ezra","Nehemiah","Esther","Job","Psalms","Proverbs","Ecclesiastes","Song of Songs","Isaiah","Jeremiah","Lamentations","Ezekiel","Daniel","Hosea","Joel","Amos","Obadiah","Jonah","Micah","Nahum","Habakkuk","Zephaniah","Haggai","Zechariah","Malachi","Matthew","Mark","Luke","John","Acts","Romans","1 Corinthians","2 Corinthians","Galatians","Ephesians","Philippians","Colossians","1 Thessalonians","2 Thessalonians","1 Timothy","2 Timothy","Titus","Philemon","Hebrews","James","1 Peter","2 Peter","1 John","2 John","3 John","Jude","Revelation"};
-	String ChineseNum[]= {"¤@","¤G","¤T","¥|","¤­","¤»","¤C","¤K","¤E","¤Q"};
+	String ChineseNum[]= {"ä¸€","äºŒ","ä¸‰","å››","äº”","å…­","ä¸ƒ","å…«","ä¹","å"};
 	String trasNum[]= {"1","2","3","4","5","6","7","8","9","10"};
-    String filename="¥¼©R¦W.txt";
+    String filename="æœªå‘½å.txt";
 	String dirName ="C:\\Users\\user\\Desktop";
-	String filePath="",bookkk,b,c,v,findstrb,tw,chars="¡ã~0123456789",vi,vf,verse,save="",s,saveall="",ver2="";//ver2=""
+	String filePath="",bookkk,b,c,v,findstrb,tw,chars="ï½~0123456789",vi,vf,verse,save="",s,saveall="",ver2="";//ver2=""
 	private JTextField txf,txf4;
 	private JButton btn1,btn2,btn3,btn4,btn5,btn6;
 	Button btn7;
@@ -97,7 +97,7 @@ public class VerseCrawlLocal extends JFrame {
 		    fw = new FileWriter(file,true);
 		    PrintWriter pw=new PrintWriter(fw);
 		    pw.println(txt);
-			pw.println("");
+			//pw.println("");
 			pw.close();	
 		}catch(Exception ex) {}
 	}
@@ -124,7 +124,7 @@ public class VerseCrawlLocal extends JFrame {
 	}
 	
 	public void showFileChange(){
-		//Åª¨ú¤å¦r
+		//è®€å–æ–‡å­—
 		String text=getFileText(dirName+"\\"+filename);
 		txa2.setText(text);
 	}
@@ -157,12 +157,12 @@ public class VerseCrawlLocal extends JFrame {
 		    			tf2.setEnabled(false);
 		    			tf1.setVisible(false);
 		    			tf2.setVisible(false);
-		    			lb1.setText("®Ñ¨÷¥[³¹¸`");
+		    			lb1.setText("æ›¸å·åŠ ç« ç¯€");
 		    			lb1.setBounds(20, 10, 75, 15);
 		    			lb2.setText("");
 		    			lb3.setText("");
-		    			lb4=new JLabel("<html>®Ñ¨÷¥[¸g¸`»İ­n¿é¤J¥¿½T¡A<br/>¥H¤U¬°½d¨Ò: ³Ğ¤@1¡B¥X¤G1~10</html>",SwingConstants.CENTER);
-		    			lb4.setFont(new Font("·s²Ó©úÅé", Font.BOLD, 14));
+		    			lb4=new JLabel("<html>æ›¸å·åŠ ç¶“ç¯€éœ€è¦è¼¸å…¥æ­£ç¢ºï¼Œ<br/>ä»¥ä¸‹ç‚ºç¯„ä¾‹: å‰µä¸€1ã€å‡ºäºŒ1~10</html>",SwingConstants.CENTER);
+		    			lb4.setFont(new Font("æ–°ç´°æ˜é«”", Font.BOLD, 14));
 		    			lb4.setBounds(134, 0, 200, 70);
 		    			contentPane.add(lb4);
 		    			
@@ -175,10 +175,10 @@ public class VerseCrawlLocal extends JFrame {
 		    			tf2.setEnabled(true);
 		    			tf1.setVisible(true);
 		    			tf2.setVisible(true);
-		    			lb1.setText("®Ñ¨÷");
+		    			lb1.setText("æ›¸å·");
 		    			lb1.setBounds(20, 10, 46, 15);
-		    			lb2.setText("³¹");
-		    			lb3.setText("¸`");
+		    			lb2.setText("ç« ");
+		    			lb3.setText("ç¯€");
 		    			
 		    			Box = new JComboBox();
 		    			Box.setBounds(22, 35, 59, 21);
@@ -222,9 +222,9 @@ public class VerseCrawlLocal extends JFrame {
 		    	   PointerInfo a = MouseInfo.getPointerInfo();Point b = a.getLocation();
 		    	    int xOrig = (int) b.getX();
 		    	    int yOrig = (int) b.getY();
-		    	   
-		    	    int mouseX = getX()+lb1.getX() +12;
-		    	    int mouseY = getY()+lb1.getY() +35;
+		    	   Point p=lb1.getLocationOnScreen();
+		    	    int mouseX=p.x; // int mouseX =getX()+lb1.getX() +12;  //getX()+lb1.getX() +12;
+		    	    int mouseY=p.y;// int mouseY =getY()+lb1.getY() +35; 
 		          
 		          Robot robot;
 				try {
@@ -241,14 +241,18 @@ public class VerseCrawlLocal extends JFrame {
 			    	chkbox2.doClick();
 			       }
 		       if(e.getKeyCode() == KeyEvent.VK_Q && e.getID()==KeyEvent.KEY_PRESSED && (e.getModifiers() & KeyEvent.CTRL_MASK) != 0) {
-		    	   	txf.requestFocusInWindow();
+		    	   toFront();
+		    	   requestFocusInWindow();
+		    	   txf.requestFocusInWindow();
 			       }
 		       
 		       if(e.getKeyCode() == KeyEvent.VK_T && e.getID()==KeyEvent.KEY_PRESSED && (e.getModifiers() & KeyEvent.CTRL_MASK) != 0) {
 		    	   	txf.setText(null);
 		    	   	tf1.setText(null);
 			       }
-		       
+		       if(e.getKeyCode() == KeyEvent.VK_G && e.getID()==KeyEvent.KEY_PRESSED && (e.getModifiers() & KeyEvent.CTRL_MASK) != 0) {
+			    	chkbox.doClick();
+			       }
 		        return false;
 		      }
 		});
@@ -259,7 +263,7 @@ public class VerseCrawlLocal extends JFrame {
 	public VerseCrawlLocal() {
 		setBackground(new Color(255, 255, 255));
 		setAlwaysOnTop(true);
-		setTitle("¸g¤å¬d¸ßor¬ö¿ı");
+		setTitle("ç¶“æ–‡æŸ¥è©¢orç´€éŒ„");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(10, 100, 590, 275);
 		contentPane = new JPanel();
@@ -270,7 +274,7 @@ public class VerseCrawlLocal extends JFrame {
 	
 		
 		lb1 = new JLabel("\u66F8\u5377");
-		lb1.setFont(new Font("·s²Ó©úÅé", Font.BOLD, 14));
+		lb1.setFont(new Font("æ–°ç´°æ˜é«”", Font.BOLD, 14));
 		lb1.setHorizontalAlignment(SwingConstants.CENTER);
 		lb1.setBounds(20, 10, 46, 15);
 		contentPane.add(lb1);
@@ -279,7 +283,7 @@ public class VerseCrawlLocal extends JFrame {
 		
 
 		lb2 = new JLabel("\u7AE0");
-		lb2.setFont(new Font("·s²Ó©úÅé", Font.BOLD, 14));
+		lb2.setFont(new Font("æ–°ç´°æ˜é«”", Font.BOLD, 14));
 		lb2.setHorizontalAlignment(SwingConstants.CENTER);
 		lb2.setBounds(134, 10, 59, 15);
 		contentPane.add(lb2);
@@ -296,7 +300,7 @@ public class VerseCrawlLocal extends JFrame {
 		
 		lb3 = new JLabel("\u7BC0");
 		lb3.setHorizontalAlignment(SwingConstants.CENTER);
-		lb3.setFont(new Font("·s²Ó©úÅé", Font.BOLD, 14));
+		lb3.setFont(new Font("æ–°ç´°æ˜é«”", Font.BOLD, 14));
 		lb3.setBounds(284, 10, 46, 15);
 		contentPane.add(lb3);
 		
@@ -314,7 +318,7 @@ public class VerseCrawlLocal extends JFrame {
 		textArea = new JTextArea();
 		textArea.setLineWrap(true);         
 		textArea.setWrapStyleWord(true);
-		textArea.setFont(new Font("·L³n¥¿¶ÂÅé",Font.PLAIN,16));
+		textArea.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”",Font.PLAIN,16));
 		
 		
 		sp0=new JScrollPane(textArea);
@@ -364,14 +368,14 @@ public class VerseCrawlLocal extends JFrame {
 		Box1 = new JComboBox();
 		Box1.setBounds(399, 105, 59, 21);
 		contentPane.add(Box1);
-		String[] fonttyp= {"¶ÂÅé","·L³n¥¿¶ÂÅé","·s²Ó©úÅé","¼Ğ·¢Åé"};
+		String[] fonttyp= {"é»‘é«”","å¾®è»Ÿæ­£é»‘é«”","æ–°ç´°æ˜é«”","æ¨™æ¥·é«”"};
 		for(int i=0 ;i<fonttyp.length ;i++){Box1.addItem(fonttyp[i]);}
 		Box1.setSelectedIndex(1);
 		
 		Box2 = new JComboBox();
 		Box2.setBounds(465, 105, 46, 21);
 		contentPane.add(Box2);
-		Object[] thick= {"²Ó","²Ê"};
+		Object[] thick= {"ç´°","ç²—"};
 		for(int i=0 ;i<thick.length ;i++){Box2.addItem(thick[i]);}
 		Box2.setSelectedIndex(0);
 		
@@ -401,7 +405,7 @@ public class VerseCrawlLocal extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("\u986F\u793A\u5B57\u9AD4");
 		lblNewLabel.setForeground(Color.BLUE);
-		lblNewLabel.setFont(new Font("·L³n¥¿¶ÂÅé", Font.BOLD, 12));
+		lblNewLabel.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”", Font.BOLD, 12));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(465, 67, 50, 20);
 		contentPane.add(lblNewLabel);
@@ -448,13 +452,13 @@ public class VerseCrawlLocal extends JFrame {
 			
 			 
 			 switch(num) {
-			 	case 0: //¦³select box
+			 	case 0: //æœ‰select box
 			 		 book= Box.getSelectedIndex();	
 			 		 bookkk=bookEng[book];
 			 		 c=tf1.getText();
 			 		 v=tf2.getText();
 			 		 break;
-			 	case 1: //®Ñ¨÷¥Î¿é¤Jªº
+			 	case 1: //æ›¸å·ç”¨è¼¸å…¥çš„
 			 		findstrb=txf.getText();
 			 		if(Arrays.asList(bookk).contains(findstrb)) {
 						book=Arrays.asList(bookk).indexOf(findstrb);
@@ -464,15 +468,15 @@ public class VerseCrawlLocal extends JFrame {
 			 		c=tf1.getText();
 			 		v=tf2.getText();
 			 		break;
-			 	case 2: //¥ş³¡¥Î¿é¤Jªº
-			 		//¸`
+			 	case 2: //å…¨éƒ¨ç”¨è¼¸å…¥çš„
+			 		//ç¯€
 			 		
 			 		v=txf.getText().replaceAll("[^" + chars + "]","");   // "\\D+"
-			 		if(v.contains("¡ã")) {v=v.replaceAll("¡ã", "~"); txf.setText(txf.getText().replaceAll("¡ã", "~"));} 
+			 		if(v.contains("ï½")) {v=v.replaceAll("ï½", "~"); txf.setText(txf.getText().replaceAll("ï½", "~"));} 
 			 		//System.out.println(v);
 			 		
 			 		
-			 		//®Ñ¨÷
+			 		//æ›¸å·
 			 		idx1=txf.getText().lastIndexOf(v);
 			 		//System.out.println("idx1="+idx1);
 			 		tw=txf.getText().substring(0,idx1);
@@ -485,18 +489,18 @@ public class VerseCrawlLocal extends JFrame {
 			 		bookkk=bookEng[book];
 			 		
 			 		
-			 		//³¹
+			 		//ç« 
 			 		idx2=b.length();
 			 		tw=txf.getText().substring(idx2, idx1);	
 			 		for(int i=0;i<ChineseNum.length-1;i++) {
 			 			c=tw.replaceAll(ChineseNum[i], trasNum[i]);
 			 			tw=c;
 			 		}
-			 		if(c.contains("¤Q")) {
-			 			if     (c.length()==1)                 {c=c.replaceAll("¤Q", "10");}
-			 			else if(c.indexOf("¤Q")==c.length()-1)  {c=c.replaceAll("¤Q", "0");}
-			 			else if(c.length()!=1&& c.indexOf("¤Q")==0)  {c=c.replaceAll("¤Q", "1");}
-			 			else {c=c.replaceAll("¤Q","");}
+			 		if(c.contains("å")) {
+			 			if     (c.length()==1)                 {c=c.replaceAll("å", "10");}
+			 			else if(c.indexOf("å")==c.length()-1)  {c=c.replaceAll("å", "0");}
+			 			else if(c.length()!=1&& c.indexOf("å")==0)  {c=c.replaceAll("å", "1");}
+			 			else {c=c.replaceAll("å","");}
 			 		}
 			 		
 			 		//System.out.println(c);
@@ -529,7 +533,7 @@ public class VerseCrawlLocal extends JFrame {
 			    		   String versef=verse.replaceAll("\\d+","");
 			    		   if(verse!=null|!verse.isEmpty()) {
 			    				   ver2=bookk[book]+c+":"+v+versef.substring(1); //.substring(1) //Box.getSelectedItem().toString()+c+":"+v+versef.substring(1)   	    
-				    	}else {System.out.println("¸g¤å³¹¸`¿ù»~");}
+				    	}else {System.out.println("ç¶“æ–‡ç« ç¯€éŒ¯èª¤");}
 			   
 			    		 save=save+ver2+"\n";
 			    		 System.out.println(ver2);
@@ -555,7 +559,7 @@ public class VerseCrawlLocal extends JFrame {
 		public void actionPerformed(ActionEvent e) {			
 			        getfileWrite("_________________________________________________________________________________________________________________________________________________________________________________________\r\n" + 
 		    		   		"");
-					textArea.setText("¤À¹j½u");
+					textArea.setText("åˆ†éš”ç·š");
 					ifChoosechkShowfilechange();
 		}
 }
@@ -579,7 +583,7 @@ public class VerseCrawlLocal extends JFrame {
 		    	textArea.setText("Save to "+filename);
 		    	
 		    	count=2;
-		    	btn1.setText("¼W¥[¸g¸` (Ctrl+d)");
+		    	btn1.setText("å¢åŠ ç¶“ç¯€ (Ctrl+d)");
 				btn2.setEnabled(true);
 				btn3.setEnabled(true);
 				btn5.setEnabled(true);
@@ -597,7 +601,7 @@ public class VerseCrawlLocal extends JFrame {
 			btn4.setEnabled(true);
 			
 			count=1;
-	    	btn1.setText("¦C¥X¸g¸`");
+	    	btn1.setText("åˆ—å‡ºç¶“ç¯€");
 			btn2.setEnabled(false);
 			btn3.setEnabled(false);
 			btn5.setEnabled(false);
@@ -641,9 +645,9 @@ public class VerseCrawlLocal extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			
 			if(chkbox.isSelected()){
-				//¶}±Òf
+				//é–‹å•Ÿf
 			/*	*/
-				f=new JFrame("Åã¥Ü©Ò¦³¸g¤å");
+				f=new JFrame("é¡¯ç¤ºæ‰€æœ‰ç¶“æ–‡");
 				f.setLayout(null);
 				f.setVisible(true);
 				f.setSize(500,600);
@@ -655,12 +659,13 @@ public class VerseCrawlLocal extends JFrame {
 			            }
 					
 				});
+				f.setResizable(false);
 				
 				txa2 = new JTextArea();
 				txa2.setBounds(10, 10, 450, 450);
 				txa2.setLineWrap(true);         
 				txa2.setWrapStyleWord(true);
-				txa2.setFont(new Font("·L³n¥¿¶ÂÅé",Font.PLAIN,16));
+				txa2.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”",Font.PLAIN,16));
 				
 				sp=new JScrollPane(txa2);
 				sp.setBounds(10, 10, 450, 450);
@@ -688,7 +693,7 @@ public class VerseCrawlLocal extends JFrame {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			if(chkbox2.isSelected()) {
-				f2=new JFrame("Åã¥Ü©Ò¦³¸g¤å");
+				f2=new JFrame("é¡¯ç¤ºæ‰€æœ‰ç¶“æ–‡");
 				f2.setLayout(null);
 				f2.setVisible(true);
 				f2.setSize(500,550);
@@ -699,10 +704,12 @@ public class VerseCrawlLocal extends JFrame {
 			            }
 					
 				});
+				f2.setResizable(false);
+				
 				txa3 = new JTextArea();
 				txa3.setLineWrap(true);         
 				txa3.setWrapStyleWord(true);
-				txa3.setFont(new Font("·L³n¥¿¶ÂÅé",Font.PLAIN,16));
+				txa3.setFont(new Font("å¾®è»Ÿæ­£é»‘é«”",Font.PLAIN,16));
 				
 				sp2=new JScrollPane(txa3);
 				sp2.setBounds(15, 10, 450, 450);
@@ -722,6 +729,3 @@ public class VerseCrawlLocal extends JFrame {
 	
 	
 }
-	
-	
-	
