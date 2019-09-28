@@ -70,7 +70,7 @@ public class VerseCrawlLocal extends JFrame {
     JScrollPane sp,sp0,sp2;
     
     /**
-	 * Launch the application.
+	 * Launch the application
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
